@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html>
+     <head>
+    <style>
+            
+body, html {
+      margin: 0;
+      background-color: #f5b461;
+      padding: 3%;
+
+     }
+
+* {
+  box-sizing: border-box;
+}
+
+
+#title {
+  text-align: center;
+  font-size: 45px;
+  font-family: monospace;
+  color: #F3EAC2;
+  text-shadow: 2px 2px 6px #000;
+}
+
+#description {
+    text-align: center;
+    font-family: monospace;
+    color: #F3EAC2;
+    text-shadow: 2px 2px 6px #000;
+}
+.mainbox {
+    display: flex;
+    background-color: #EC524B;
+    margin: auto;
+    width: 50%;
+    padding: 2%;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;  
+    box-shadow: 2px 2px 6px #000; 
+}
+
+.name_space, .email_space, .number_space {
+    display: flex;
+    flex-flow: row;
+    border: 3px dotted #F5B461;
+    border-radius: 5px;
+    margin: 15px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-right: 5%;
+    transition: 400ms;
+}
+
+.drop_space, .radio_space, .check_space {
+    display: flex;
+    flex-flow: column;
+    border: 3px dotted #F5B461;
+    border-radius: 5px;
+    margin: 15px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-right: 5%;
+    padding-left: 5%;
+    transition: 400ms;
+}
+  
+  .dropsome_space {
+    display: flex;
+    flex-flow: column;
+    border: 3px dotted #F5B461;
+    border-radius: 5px;
+    margin: 15px;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-right: 5%;
+    padding-left: 5%;
+    transition: 400ms;
+}
+
+#name-label, #email-label, #number-label {
+    flex-grow: 1;
+    font-size: 27px;
+    font-family: monospace;
+    color:#F3EAC2; 
+    width: 50%;
+    text-align: right;
+    margin: auto;
+ }
+ #dropdown-label, #radio-label, #endofthe-label{
+    display: block;
+    font-size: 20px;
+    font-family: monospace;
+    color:#F3EAC2; 
+    width: 100%;
+    text-align: center;
+    margin: auto;
+ }
+ 
+ .name_space:hover, .email_space:hover, .number_space:hover {
+    animation-name: fontcolor;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    transform: scale(1.10);
+}
+
+.drop_space:hover, .radio_space:hover, .check_space:hover {
+    animation-name: fontcolor;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    transform: scale(1.10);
+}
+
+.dropsome_space:hover {
+    animation-name: fontcolor;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards;
+    transform: scale(1.10);
+}
+.submitbutton:hover{
+    transform: scale(1.20);
+}
+
+#name, #email, #number {
+    width: 100%;
+    height: 3em;
+    margin: auto;
+    flex-grow: 8;
+}
+#dropdown {
+    display: block;
+    width: 100%;
+    height: 3em;
+    margin: auto;
+    
+}
+
+.radio_text {
+    
+    color:#F3EAC2;
+    font-size: 18px;
+    font-family: monospace;
+}
+
+@keyframes fontcolor {
+    from {text-shadow: 0px 0px 0px #000; }
+    to {text-shadow: 2px 2px 6px #000;}  
+}
+
+.submitbutton {
+    display: flex;
+    font-family: monospace;
+    font-size: 25px;
+    background-color: #9AD3BC;
+    color:#EC524B;
+    width: 250px;
+    height: 50px;
+    margin: 0 auto;
+    padding: 0;
+    display: table-cell;
+    vertical-align: middle;
+    transition: 400ms;
+}
+
+.workingbutton {
+    display: flex;
+    justify-content: center;
+}
+
+#somelove {
+    width: 100%;
+    height: 150px;
+    resize: none;
+}
+</style>
+</head>  
+        <body>
+            <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+            <div class="mainbox"> 
+                <h1 id="title">Simple Survey</h1>
+                <p id="description">If you want to support me, join this survey </p>
+                          
+            <form id="survey-form">
+                <div class="name_space">
+                    <label id="name-label" for="name">Name : </label>
+                    <input id="name" type="text" placeholder="Please enter your name" required>
+                </div>
+                <div class="email_space">
+                    <label id="email-label" for="email">Email :</label>
+                    <input id="email" type="email" placeholder="Please enter your email address" required>
+                </div>
+                <div class="number_space">
+                    <label id="number-label" for="number">Age :</label>
+                    <input id="number" type="number" min="1" max="85" placeholder="Age" required>
+                </div>
+                <div class="drop_space">
+                    <label id="dropdown-label" for="abomination">What type of abomination you are? </label>
+                    <select id="dropdown" name="abomination" required>
+                        <option disabled selected value>Abomination Meter</option>
+                        <option value="level_1">I am just a bad person</option>
+                        <option value="level_2">I am against the law</option>
+                        <option value="level_3">Breaking rules like bone</option>
+                        <option value="level_4">Metalhead</option>
+                    </select>
+                </div>
+
+
+
+
+                <div class="radio_space">
+                    <label id="radio-label" for="dumbmeter">Do you consider yourself a dumb person? </label>
+                    <div class="radio_option1">
+                        <input type="radio" id="radio1" name="dumbmeter" value="ofcourse">
+                            <label for="radio1" class="radio_text">I'm not consider anything</label>
+                    </div>
+                    <div class="radio_option2">
+                    <input type="radio" id="radio2" name="dumbmeter" value="whadoyathink">
+                            <label for="radio2" class="radio_text">Let me think</label>
+                    </div>
+                    <div class="radio_option3">
+                    <input type="radio" id="radio3" name="dumbmeter" value="hellyea">
+                            <label for="radio3" class="radio_text">Hell yeah brother</label>
+                    </div>
+                    </div>
+                   
+                    
+
+
+                <div class="check_space">
+                    <label id="endofthe-label" for="endofall">Choose three things that most important to you. </label>
+                   <div class="check_option1">
+                       <input type="checkbox" id="option1" name="endofall" value="whythefucknot">
+                    <label for="option1" class="radio_text">Money</label>
+                    </div>
+                    <div class="check_option2">
+                        <input type="checkbox" id="option2" name="endofall" value="dafuccc">
+                        <label for="option2" class="radio_text">Wealth</label>
+                    </div>
+                    <div class="check_option3">
+                        <input type="checkbox" id="option3" name="endofall" value="thisis"> 
+                        <label for="option3" class="radio_text">Richness</label> 
+                    </div>
+                   
+                    
+                </div>
+
+
+
+
+                <div class="dropsome_space">
+                    <label id="dropmesome" for="somelove" class="radio_text"> Drop me some love. </label>
+                    <textarea id="somelove" placeholder="Some love?"></textarea>
+                </div>
+
+                <div class="workingbutton">
+                    <button type="submit" id="submit" value="submit" class="submitbutton">Submit</button>
+                </div>
+            
+            </form>
+            </div>
+         
+        
+        </body>
+      
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+     <head>
+    <style>
+            
+body, html {
+      margin: 0;
+      background-color: azure;
+     }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+#title {
+  text-align: center;
+  font-size: 45px;
+  font-family: monospace;
+  color: black;
+}
+
+#description {
+    text-align: center;
+    font-family: monospace;
+}
+
+
+        </style>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+          </head>  
+        <body>
+            <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+         <h1 id="title">Hello Broueueuee</h1>
+            <p id="description">This is some real god damn shit right here, yo check this shiet </p>
+            <form id="survey-form">
+                <div class="name_space">
+                    <label id="name-label" for="name">Enter your frikin'name : </label>
+                    <input id="name" type="text" placeholder="Enter your frikin'name" required>
+                </div>
+                <div class="email_space">
+                    <label id="email-label" for="email">Goddamn Email dude :</label>
+                    <input id="email" type="email" placeholder="Enter your goddamn email" required>
+                </div>
+                <div class="number_space">
+                    <label id="number-label" for="number">Age is just a number :</label>
+                    <input id="number" type="number" min="1" max="85" placeholder="Age" required>
+                </div>
+                <div class="dropthatdown">
+                    <label id="dropdown_space" for="abomination">What type of abomination you are? </label>
+                    <select id="dropdown" name="abomination" required>
+                        <option disabled selected value>Abomination Meter</option>
+                        <option value="level_1">I am just a bad person</option>
+                        <option value="level_2">I am against the law</option>
+                        <option value="level_1">Breaking rules like bone</option>
+                        <option value="level_1">Metalhead</option>
+                    </select>
+                </div>
+                <div class="radiovideo">
+                    <label id="radio_space" for="dumbmeter">Are you a fucking dumb? </label>
+                    <input type="radio" id="radio1" name="dumbmeter" value="ofcourse">
+                            <label for="radio1">Of Fuckin' Course</label>
+                    <input type="radio" id="radio2" name="dumbmeter" value="whadoyathink">
+                            <label for="radio2">What do you think?</label>
+                    <input type="radio" id="radio3" name="dumbmeter" value="hellyea">
+                            <label for="radio3">Hell yea brothter</label>
+                </div>
+                <div class="checkmebox">
+                    <label id="endoftheworld" for="endofall">Do you wanna see end of the f'in world? </label>
+                    <input type="checkbox" id="option1" name="endofall" value="whythefucknot">
+                           <label for="option1">Why the fuck not dude?</label>
+                    <input type="checkbox" id="option2" name="endofall" value="dafuccc">
+                           <label for="option2">What the fuck is wrong with you?</label>
+                    <input type="checkbox" id="option3" name="endofall" value="thisis"> 
+                           <label for="option3">This is seriously fucked up man.</label> 
+                </div>
+                <div class="dropsome">
+                    <label id="dropmesome" for="somelove"> Drop me some love eh? Down below :</label>
+                    <textarea id="somelove" placeholder="Drop me some love?"></textarea>
+                </div>
+                <div class="workingbutton">
+                    <button type="submit" id="submit" value="submit" class="submitbutton">Admit and send</button>
+                </div>
+
+            </form>
+            
+         
+        
+        </body>
+      
+</html>
